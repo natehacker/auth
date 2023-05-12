@@ -2,7 +2,7 @@
 // Below function Executes on click of login button.
 function redir(){
     var username = document.getElementById("username").value;
-    var url= "https://burkeitconsulating.com/hcfraud/?user=" + username;
+    var url= "https://burkeitconsulating.com/hcfraud/?username=" + username;
     window.location = url;
     }
 
