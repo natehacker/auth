@@ -9,12 +9,17 @@
 <div class="main">
 <h2>MFA LOGIN</h2>
 <form id="form_id" method="post" name="myform">
-<label>User Name</label>
-<input type="text" name="username" id="username"/>
+<!-- <label>User Name</label>
+<input type="text" name="username" id="username" required/> -->
+<label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+
+
 <label>Password</label>
 <input type="text" id="submit" onclick="redir()"/>
 <input type="button" value="Login" id="submit"/>
 </form>
+<input type="checkbox" checked="checked" name="remember"> Remember me
 </div>
 </div>
 <script src="login.js">
